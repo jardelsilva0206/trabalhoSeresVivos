@@ -1,4 +1,4 @@
 
-public class Monera {
+public class Monera extends SeresVivos{
 
 }

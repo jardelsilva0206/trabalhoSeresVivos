@@ -1,4 +1,4 @@
 
-public class Animalia {
+public class Animalia extends SeresVivos{
 
 }

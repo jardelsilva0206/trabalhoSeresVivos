@@ -1,4 +1,4 @@
 
-public class Plantae {
+public class Plantae extends SeresVivos{
 
 }

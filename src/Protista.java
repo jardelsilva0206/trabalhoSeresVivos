@@ -1,4 +1,4 @@
 
-public class Protista {
+public class Protista extends SeresVivos{
 
 }
