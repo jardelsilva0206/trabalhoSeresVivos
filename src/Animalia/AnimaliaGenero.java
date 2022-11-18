@@ -3,6 +3,10 @@ package Animalia;
 public class AnimaliaGenero extends AnimaliaFamilia {
 	private String genero;
 
+	public AnimaliaGenero(){
+		super();
+	}
+
 	public AnimaliaGenero(String nomeSerVivo, String reino, String filo, String classe, String ordem, String familia,
 			String genero) {
 		super(nomeSerVivo, reino, filo, classe, ordem, familia);

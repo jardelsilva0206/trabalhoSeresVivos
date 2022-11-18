@@ -3,6 +3,10 @@ package Animalia;
 public class AnimaliaOrdem extends AnimaliaClasse {
 	private String ordem;
 
+	public AnimaliaOrdem(){
+		super();
+	}
+
 	public AnimaliaOrdem(String nomeSerVivo, String reino, String filo, String classe, String ordem) {
 		super(nomeSerVivo, reino, filo, classe);
 		this.ordem = ordem;

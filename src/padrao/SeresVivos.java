@@ -3,12 +3,15 @@ package padrao;
 import java.util.ArrayList;
 
 import Animalia.AnimaliaEspecie;
+import Monera.MoneraEspecie;
 import Protista.ProtistaGenero;
 
 public class SeresVivos {
 	private String nomeSerVivo;
-	public ArrayList<AnimaliaEspecie> listaAnimalia = new ArrayList();
-	public ArrayList<ProtistaGenero> listaProtista = new ArrayList();
+
+
+
+	public SeresVivos(){}
 
 	public SeresVivos(String nomeSerVivo) {
 		super();
@@ -22,6 +25,8 @@ public class SeresVivos {
 	public void setNomeSerVivo(String nomeSerVivo) {
 		this.nomeSerVivo = nomeSerVivo;
 	}
+
+
 
 	@Override
 	public String toString() {

@@ -1,20 +1,23 @@
-package Animalia;
+package Monera;
+
+import Monera.MoneraGenero;
 
 import java.util.Scanner;
 
-public class AnimaliaEspecie extends AnimaliaGenero {
+public class MoneraEspecie extends MoneraGenero {
 	private String especie;
+	private String alimentacao;
+	private String organismo;
 	private Scanner sc = new Scanner(System.in);
 
-
-	public AnimaliaEspecie(){
-		super();
-	};
-
-	public AnimaliaEspecie(String nomeSerVivo, String reino, String filo, String classe, String ordem, String familia,
-			String genero, String especie) {
+	public MoneraEspecie(String nomeSerVivo, String reino, String filo, String classe, String ordem, String familia,
+						 String genero, String especie) {
 		super(nomeSerVivo, reino, filo, classe, ordem, familia, genero);
 		this.especie = especie;
+	}
+
+	public MoneraEspecie(){
+		super();
 	}
 
 	public void cadastrar(){
@@ -30,6 +33,10 @@ public class AnimaliaEspecie extends AnimaliaGenero {
 		setGenero(sc.next());
 		System.out.println("Especie:");
 		this.especie = sc.next();
+		System.out.println("É heterotrófico ou autotrófico:");
+		this.alimentacao = sc.next();
+		System.out.println("Qual é o tipo de organismo do(a) " + especie + ":");
+		this.organismo = sc.next();
 	}
 
 	public String getEspecie() {
@@ -38,11 +45,6 @@ public class AnimaliaEspecie extends AnimaliaGenero {
 
 	public void setEspecie(String especie) {
 		this.especie = especie;
-	}
-
-	@Override
-	public String toString() {
-		return "AnimaliaEspecie [especie=" + especie + "]";
 	}
 
 }
