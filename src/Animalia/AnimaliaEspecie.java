@@ -45,4 +45,18 @@ public class AnimaliaEspecie extends AnimaliaGenero {
 		return "AnimaliaEspecie [especie=" + especie + "]";
 	}
 
+	public void atualizar() {
+		System.out.println("Filo:");
+		setFilo(sc.next());
+		System.out.println("Classe:");
+		setClasse(sc.next());
+		System.out.println("Ordem:");
+		setOrdem(sc.next());
+		System.out.println("Familia:");
+		setFamilia(sc.next());
+		System.out.println("Genero:");
+		setGenero(sc.next());
+		System.out.println("Especie:");
+		this.especie = sc.next();
+	}
 }

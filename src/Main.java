@@ -11,6 +11,8 @@ public class Main {
         Gerenciador gerenciador = new Gerenciador();
         boolean flag = true;
 
+        MoneraEspecie m = new MoneraEspecie("a", "b", "c", "d", "e", "f", "g", "h", "i", "j");
+        gerenciador.addMonera(m);
         while (flag){
             gerenciador.menuPrincipal();
             int opc = sc.nextInt();
@@ -22,28 +24,13 @@ public class Main {
                 case 4 -> gerenciador.listarEspecie();
                 case 5 -> gerenciador.listarTudo();
                 case 6 -> flag = false;
-                default -> System.out.println("Opcção incorreta!");
+                default -> System.out.println("Opção incorreta!");
             }
         }
 
-
-
-
-
+        System.out.println("Aplicação encerrada!");
 
         sc.close();
 
-    }
-
-    public static void menu(){
-        System.out.println("----------------------MENU----------------------");
-        System.out.println("1- Animalia");
-        System.out.println("2- Fungi");
-        System.out.println("3- Monera");
-        System.out.println("4- Plantae");
-        System.out.println("5- Protista");
-        System.out.println("6- Sair");
-        System.out.println("------------------------------------------------");
-        System.out.print("Qual será sua opção: ");
     }
 }

@@ -1,6 +1,7 @@
 import Animalia.AnimaliaEspecie;
 import Monera.MoneraEspecie;
 import Protista.ProtistaGenero;
+import padrao.SeresVivos;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -9,9 +10,9 @@ public class Gerenciador {
 
     private Scanner sc = new Scanner(System.in);
 
-    public ArrayList<AnimaliaEspecie> listaAnimalia = new ArrayList();
-    public ArrayList<ProtistaGenero> listaProtista = new ArrayList();
-    public ArrayList<MoneraEspecie> listaMonera = new ArrayList();
+    public ArrayList<AnimaliaEspecie> listaAnimalia = new ArrayList<>();
+    public ArrayList<ProtistaGenero> listaProtista = new ArrayList<>();
+    public ArrayList<MoneraEspecie> listaMonera = new ArrayList<>();
 
     public Gerenciador(){}
 
@@ -91,8 +92,75 @@ public class Gerenciador {
     }
 
     public void removerEspecie() {
+        menuEspecies();
+        int opc = sc.nextInt();
+
+        String especie = sc.next();
+
+        if (opc == 1){
+            listaAnimalia.removeIf(a -> especie.equalsIgnoreCase(a.getEspecie()));
+        } else if (opc == 2){
+            //listaFungi.removeIf(f -> especie.equalsIgnoreCase(f.getEspecie()));
+        } else if (opc == 3){
+            listaMonera.removeIf(m -> especie.equalsIgnoreCase(m.getEspecie()));
+        } else if (opc == 4){
+            //listaPlantae.removeIf(p -> especie.equalsIgnoreCase(p.getEspecie()));
+        } else if (opc == 5){
+            //listaProtista.removeIf(p -> especie.equalsIgnoreCase(p.getEspecie()));
+        } else {
+            System.out.println("Verifique a opção informada!");
+        }
+
     }
 
     public void atualizarEspecie() {
+        menuEspecies();
+        int opc = sc.nextInt();
+        String nomeEspecie = sc.next();
+
+        if (opc == 1){
+            for (AnimaliaEspecie a: listaAnimalia){
+                if (nomeEspecie.equalsIgnoreCase(a.getEspecie())){
+                    a.atualizar();
+                    return;
+                }
+            }
+            System.out.println("Não encontramos uma espécie com este nome!");
+        } else if (opc == 2){
+            /*for (FungiEspecie m: listaMonera){
+                if (nomeEspecie.equalsIgnoreCase(m.getEspecie())){
+                    m.atualizar();
+                    return;
+                }
+            }
+            System.out.println("Não encontramos uma espécie com este nome!");*/
+        } else if (opc == 3){
+            for (MoneraEspecie m: listaMonera){
+                if (nomeEspecie.equalsIgnoreCase(m.getEspecie())){
+                    m.atualizar();
+                    return;
+                }
+            }
+            System.out.println("Não encontramos uma espécie com este nome!");
+
+        } else if (opc == 4){
+            /*for (PlantaeEspecie p: listaPlantae){
+                if (nomeEspecie.equalsIgnoreCase(p.getEspecie())){
+                    p.atualizar();
+                    return;
+                }
+            }
+            System.out.println("Não encontramos uma espécie com este nome!");*/
+        } else if (opc == 5){
+            /*for (ProtistaEspecie p: listaProtista){
+                if (nomeEspecie.equalsIgnoreCase(p.getEspecie())){
+                    p.atualizar();
+                    return;
+                }
+            }
+            System.out.println("Não encontramos uma espécie com este nome!");*/
+        } else {
+            System.out.println("Verifique a opção informada!");
+        }
     }
 }
