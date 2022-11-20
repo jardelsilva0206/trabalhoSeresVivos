@@ -1,7 +1,9 @@
 import Animalia.AnimaliaEspecie;
 import Monera.MoneraEspecie;
 import Protista.ProtistaGenero;
+import Plantae.PlantaeEspecie;
 import padrao.SeresVivos;
+
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -13,6 +15,7 @@ public class Gerenciador {
     public ArrayList<AnimaliaEspecie> listaAnimalia = new ArrayList<>();
     public ArrayList<ProtistaGenero> listaProtista = new ArrayList<>();
     public ArrayList<MoneraEspecie> listaMonera = new ArrayList<>();
+    public ArrayList<PlantaeEspecie> listaPlantae = new ArrayList<>();
 
     public Gerenciador(){}
 
@@ -29,7 +32,11 @@ public class Gerenciador {
             MoneraEspecie moneraEspecie = new MoneraEspecie();
             moneraEspecie.cadastrar();
             listaMonera.add(moneraEspecie);
+
         } else if (opc == 4){
+            PlantaeEspecie plantaeEspecie = new PlantaeEspecie();
+            plantaeEspecie.cadastrar();
+            listaPlantae.add(plantaeEspecie);
 
         } else if (opc == 5){
 
@@ -47,7 +54,7 @@ public class Gerenciador {
         System.out.println("Lista de espécies do reino Monera:");
         listaMonera.forEach(System.out::println);
         System.out.println("Lista de espécies do reino Plantae:");
-        //listaPlantae.forEach(System.out::println);
+        listaPlantae.forEach(System.out::println);        
         System.out.println("Lista de espécies do reino Protista:");
         listaProtista.forEach(System.out::println);
     }
@@ -59,7 +66,7 @@ public class Gerenciador {
         if (opc == 1) listaAnimalia.forEach(System.out::println);
         //else if (opc == 2) listaFungi.forEach(System.out::println);
         else if (opc == 3) listaMonera.forEach(System.out::println);
-        //else if (opc == 4) listaPlantae.forEach(System.out::println);
+        else if (opc == 4) listaPlantae.forEach(System.out::println);
         else if (opc == 5) listaProtista.forEach(System.out::println);
         else System.out.println("Opção inválida!!");
     }
@@ -104,7 +111,7 @@ public class Gerenciador {
         } else if (opc == 3){
             listaMonera.removeIf(m -> especie.equalsIgnoreCase(m.getEspecie()));
         } else if (opc == 4){
-            //listaPlantae.removeIf(p -> especie.equalsIgnoreCase(p.getEspecie()));
+            listaPlantae.removeIf(p -> especie.equalsIgnoreCase(p.getEspecie()));
         } else if (opc == 5){
             //listaProtista.removeIf(p -> especie.equalsIgnoreCase(p.getEspecie()));
         } else {
