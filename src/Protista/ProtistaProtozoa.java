@@ -1,11 +1,17 @@
 package Protista;
 
+import padrao.Protista;
+
 public class ProtistaProtozoa extends Protista {
 	private String protozoa;
 
 	public ProtistaProtozoa(String nomeSerVivo, String reino, String protozoa) {
 		super(nomeSerVivo, reino);
 		this.protozoa = protozoa;
+	}
+
+	public ProtistaProtozoa(){
+		super();
 	}
 
 	public String getProtozoa() {

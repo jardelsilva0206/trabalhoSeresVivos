@@ -1,5 +1,7 @@
 package Animalia;
 
+import padrao.Animalia;
+
 public class AnimaliaFilo extends Animalia {
 	private String filo;
 

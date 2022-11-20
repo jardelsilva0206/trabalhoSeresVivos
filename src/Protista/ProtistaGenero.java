@@ -9,6 +9,10 @@ public class ProtistaGenero extends ProtistaFamilia {
 		this.genero = genero;
 	}
 
+	public ProtistaGenero(){
+		super();
+	}
+
 	public String getGenero() {
 		return genero;
 	}

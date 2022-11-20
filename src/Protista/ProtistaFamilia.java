@@ -9,6 +9,10 @@ public class ProtistaFamilia extends ProtistaOrdem {
 		this.familia = familia;
 	}
 
+	public ProtistaFamilia(){
+		super();
+	}
+
 	public String getFamilia() {
 		return familia;
 	}

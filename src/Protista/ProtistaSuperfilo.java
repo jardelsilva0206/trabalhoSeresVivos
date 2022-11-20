@@ -8,6 +8,10 @@ public class ProtistaSuperfilo extends ProtistaProtozoa {
 		this.superFilo = superFilo;
 	}
 
+	public ProtistaSuperfilo(){
+		super();
+	}
+
 	public String getSuperFilo() {
 		return superFilo;
 	}

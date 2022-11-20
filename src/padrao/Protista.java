@@ -2,17 +2,16 @@ package padrao;
 
 import padrao.SeresVivos;
 
-public class Fungi extends SeresVivos {
-
+public class Protista extends SeresVivos {
 	private String reino;
 
-	public Fungi() {
-		super();
+	public Protista(String nomeSerVivo, String reino) {
+		super(nomeSerVivo);
+		this.reino = reino;
 	}
 
-	public Fungi(String nomeSerVivo, String reino) {
-		super(nomeSerVivo);
-		this.reino = "Fungi";
+	public Protista(){
+		super();
 	}
 
 	public String getReino() {
@@ -25,7 +24,7 @@ public class Fungi extends SeresVivos {
 
 	@Override
 	public String toString() {
-		return "Fungi [reino=" + reino + "]";
+		return "Protista [reino=" + reino + "]";
 	}
 
 }

@@ -1,5 +1,7 @@
 package Fungi;
 
+import padrao.Fungi;
+
 public class FungiFilo extends Fungi {
 
 	private String filo;

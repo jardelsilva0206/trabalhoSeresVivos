@@ -1,3 +1,5 @@
+import Animalia.Animalia;
+import Animalia.AnimaliaEspecie;
 import Monera.MoneraEspecie;
 import Plantae.PlantaeEspecie;
 

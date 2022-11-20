@@ -1,6 +1,6 @@
 package Monera;
 
-import Monera.Monera;
+import padrao.Monera;
 
 public class MoneraFilo extends Monera {
 	private String filo;
