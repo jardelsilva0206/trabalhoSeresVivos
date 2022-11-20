@@ -1,15 +1,16 @@
-package Animalia;
+package Fungi;
 
-import padrao.Animalia;
+import padrao.Fungi;
 
-public class AnimaliaFilo extends Animalia {
+public class FungiFilo extends Fungi {
+
 	private String filo;
 
-	public AnimaliaFilo(){
+	public FungiFilo() {
 		super();
 	}
 
-	public AnimaliaFilo(String nomeSerVivo, String reino, String filo) {
+	public FungiFilo(String nomeSerVivo, String reino, String filo) {
 		super(nomeSerVivo, reino);
 		this.filo = filo;
 	}
@@ -24,7 +25,7 @@ public class AnimaliaFilo extends Animalia {
 
 	@Override
 	public String toString() {
-		return "AnimaliaFilo [filo=" + filo + "]";
+		return "FungiFilo [filo=" + filo + "]";
 	}
 
 }

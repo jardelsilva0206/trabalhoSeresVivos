@@ -8,6 +8,10 @@ public class ProtistaFilo extends ProtistaSuperfilo {
 		this.filo = filo;
 	}
 
+	public ProtistaFilo(){
+		super();
+	}
+
 	public String getFilo() {
 		return filo;
 	}

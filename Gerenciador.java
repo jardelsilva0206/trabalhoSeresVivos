@@ -1,7 +1,5 @@
 import Animalia.AnimaliaEspecie;
-import Fungi.FungiEspecie;
 import Monera.MoneraEspecie;
-import Protista.ProtistaEspecie;
 import Protista.ProtistaGenero;
 import Plantae.PlantaeEspecie;
 import padrao.SeresVivos;
@@ -14,11 +12,10 @@ public class Gerenciador {
 
     private Scanner sc = new Scanner(System.in);
 
-    private ArrayList<AnimaliaEspecie> listaAnimalia = new ArrayList<>();
-    private ArrayList<ProtistaEspecie> listaProtista = new ArrayList<>();
-    private ArrayList<MoneraEspecie> listaMonera = new ArrayList<>();
-    private ArrayList<PlantaeEspecie> listaPlantae = new ArrayList<>();
-    private ArrayList<FungiEspecie> listaFungi = new ArrayList<>();
+    public ArrayList<AnimaliaEspecie> listaAnimalia = new ArrayList<>();
+    public ArrayList<ProtistaGenero> listaProtista = new ArrayList<>();
+    public ArrayList<MoneraEspecie> listaMonera = new ArrayList<>();
+    public ArrayList<PlantaeEspecie> listaPlantae = new ArrayList<>();
 
     public Gerenciador(){}
 
@@ -30,21 +27,19 @@ public class Gerenciador {
             animaliaEspecie.cadastrar();
             listaAnimalia.add(animaliaEspecie);
         } else if (opc == 2){
-            FungiEspecie fungiEspecie = new FungiEspecie();
-            fungiEspecie.cadastrar();
-            listaFungi.add(fungiEspecie);
+
         } else if (opc == 3){
             MoneraEspecie moneraEspecie = new MoneraEspecie();
             moneraEspecie.cadastrar();
             listaMonera.add(moneraEspecie);
+
         } else if (opc == 4){
             PlantaeEspecie plantaeEspecie = new PlantaeEspecie();
             plantaeEspecie.cadastrar();
             listaPlantae.add(plantaeEspecie);
+
         } else if (opc == 5){
-            FungiEspecie fungiEspecie = new FungiEspecie();
-            fungiEspecie.cadastrar();
-            listaFungi.add(fungiEspecie);
+
         } else {
             System.out.println("Verifique a opção informada!");
         }
@@ -55,7 +50,7 @@ public class Gerenciador {
         System.out.println("Lista de espécies do reino Animalia:");
         listaAnimalia.forEach(System.out::println);
         System.out.println("Lista de espécies do reino Fungi:");
-        listaFungi.forEach(System.out::println);
+        //listaFungi.forEach(System.out::println);
         System.out.println("Lista de espécies do reino Monera:");
         listaMonera.forEach(System.out::println);
         System.out.println("Lista de espécies do reino Plantae:");
@@ -69,7 +64,7 @@ public class Gerenciador {
         menuEspecies();
         int opc = sc.nextInt();
         if (opc == 1) listaAnimalia.forEach(System.out::println);
-        else if (opc == 2) listaFungi.forEach(System.out::println);
+        //else if (opc == 2) listaFungi.forEach(System.out::println);
         else if (opc == 3) listaMonera.forEach(System.out::println);
         else if (opc == 4) listaPlantae.forEach(System.out::println);
         else if (opc == 5) listaProtista.forEach(System.out::println);
@@ -112,13 +107,13 @@ public class Gerenciador {
         if (opc == 1){
             listaAnimalia.removeIf(a -> especie.equalsIgnoreCase(a.getEspecie()));
         } else if (opc == 2){
-            listaFungi.removeIf(f -> especie.equalsIgnoreCase(f.getEspecie()));
+            //listaFungi.removeIf(f -> especie.equalsIgnoreCase(f.getEspecie()));
         } else if (opc == 3){
             listaMonera.removeIf(m -> especie.equalsIgnoreCase(m.getEspecie()));
         } else if (opc == 4){
             listaPlantae.removeIf(p -> especie.equalsIgnoreCase(p.getEspecie()));
         } else if (opc == 5){
-            listaProtista.removeIf(p -> especie.equalsIgnoreCase(p.getEspecie()));
+            //listaProtista.removeIf(p -> especie.equalsIgnoreCase(p.getEspecie()));
         } else {
             System.out.println("Verifique a opção informada!");
         }
@@ -128,7 +123,6 @@ public class Gerenciador {
     public void atualizarEspecie() {
         menuEspecies();
         int opc = sc.nextInt();
-        System.out.println("Informe o nome da espécie:");
         String nomeEspecie = sc.next();
 
         if (opc == 1){
@@ -140,13 +134,13 @@ public class Gerenciador {
             }
             System.out.println("Não encontramos uma espécie com este nome!");
         } else if (opc == 2){
-            for (FungiEspecie f: listaFungi){
-                if (nomeEspecie.equalsIgnoreCase(f.getEspecie())){
-                    f.atualizar();
+            /*for (FungiEspecie m: listaMonera){
+                if (nomeEspecie.equalsIgnoreCase(m.getEspecie())){
+                    m.atualizar();
                     return;
                 }
             }
-            System.out.println("Não encontramos uma espécie com este nome!");
+            System.out.println("Não encontramos uma espécie com este nome!");*/
         } else if (opc == 3){
             for (MoneraEspecie m: listaMonera){
                 if (nomeEspecie.equalsIgnoreCase(m.getEspecie())){
@@ -157,21 +151,21 @@ public class Gerenciador {
             System.out.println("Não encontramos uma espécie com este nome!");
 
         } else if (opc == 4){
-            for (PlantaeEspecie p: listaPlantae){
+            /*for (PlantaeEspecie p: listaPlantae){
                 if (nomeEspecie.equalsIgnoreCase(p.getEspecie())){
                     p.atualizar();
                     return;
                 }
             }
-            System.out.println("Não encontramos uma espécie com este nome!");
+            System.out.println("Não encontramos uma espécie com este nome!");*/
         } else if (opc == 5){
-            for (ProtistaEspecie p: listaProtista){
+            /*for (ProtistaEspecie p: listaProtista){
                 if (nomeEspecie.equalsIgnoreCase(p.getEspecie())){
                     p.atualizar();
                     return;
                 }
             }
-            System.out.println("Não encontramos uma espécie com este nome!");
+            System.out.println("Não encontramos uma espécie com este nome!");*/
         } else {
             System.out.println("Verifique a opção informada!");
         }

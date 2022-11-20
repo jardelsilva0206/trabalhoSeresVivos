@@ -9,6 +9,10 @@ public class ProtistaOrdem extends ProtistaClasse {
 		this.ordem = ordem;
 	}
 
+	public ProtistaOrdem(){
+		super();
+	}
+
 	public String getOrdem() {
 		return ordem;
 	}
