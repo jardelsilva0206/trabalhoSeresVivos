@@ -12,7 +12,7 @@ public class PlantaeClasse extends PlantaeFilo {
         this.classe = classe;
     }
 
-    public void getClasse() {
+    public String getClasse() {
         return classe;
     }
 
