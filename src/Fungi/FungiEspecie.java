@@ -3,7 +3,6 @@ package Fungi;
 import java.util.Scanner;
 
 public class FungiEspecie extends FungiGenero {
-
 	private String especie;
 	private String tipoCelular;
 	private String organismo;
@@ -38,8 +37,8 @@ public class FungiEspecie extends FungiGenero {
 		System.out.println("Qual é o tipo de organismo do(a) " + especie + ":");
 		this.organismo = sc.next();
 	}
-	
-	public void atualizar(){
+
+	public void atualizar() {
 		System.out.println("Iniciando a edição:");
 		System.out.println("Filo:");
 		setFilo(sc.next());
