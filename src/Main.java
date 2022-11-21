@@ -19,13 +19,13 @@ public class Main {
             int opc = sc.nextInt();
 
             switch (opc) {
-                case 1 :gerenciador.cadastrarEspecie();
-                case 2 : gerenciador.removerEspecie();
-                case 3 : gerenciador.atualizarEspecie();
-                case 4 : gerenciador.listarEspecie();
-                case 5 : gerenciador.listarTudo();
-                case 6 : flag = false;
-                default : System.out.println("Opção incorreta!");
+                case 1 -> gerenciador.cadastrarEspecie();
+                case 2 -> gerenciador.removerEspecie();
+                case 3 -> gerenciador.atualizarEspecie();
+                case 4 -> gerenciador.listarEspecie();
+                case 5 -> gerenciador.listarTudo();
+                case 6 -> flag = false;
+                default -> System.out.println("Opção incorreta!");
             }
         }
 
