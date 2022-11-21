@@ -9,20 +9,20 @@ public class PlantaeFilo extends Plantae {
 
     public PlantaeFilo(String nomeSerVivo, String reino, String filo) {
         super(nomeSerVivo, reino);
-        this.filo = filo;
+        this.Filo = filo;
     }
 
     public String getFilo() {
-        return filo;
+        return Filo;
     }
 
     public void setFilo(String filo) {
-        this.filo = filo;
+        this.Filo = filo;
     }
 
     @Override
     public String toString() {
-        return "PlantaeFilo [filo=" + filo + "]";
+        return "PlantaeFilo [filo=" + Filo + "]";
     }
 
 }

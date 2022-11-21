@@ -18,7 +18,7 @@ public class PlantaeGenero extends PlantaeFamilia {
     }
 
     public void setGenero(String genero){
-        this.genero;
+        this.genero =genero;
     }
 
     @Override
