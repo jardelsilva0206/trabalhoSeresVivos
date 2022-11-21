@@ -103,23 +103,38 @@ public class Gerenciador {
     public void addMonera(MoneraEspecie monera){
         this.listaMonera.add(monera);
     }
+    public void addAnimalia(AnimaliaEspecie animalia){
+        this.listaAnimalia.add(animalia);
+    }
+    public void addFungi(FungiEspecie fungi){
+        this.listaFungi.add(fungi);
+    }
+    public void addPlantae(PlantaeEspecie plantae){
+        this.listaPlantae.add(plantae);
+    }
+    public void addProtista(ProtistaEspecie protista){
+        this.listaProtista.add(protista);
+    }
 
     public void removerEspecie() {
         menuEspecies();
         int opc = sc.nextInt();
 
-        String especie = sc.next();
+        System.out.println("Informe o nome da espécie:");
+        sc.nextLine();
+        String nomeEspecie = sc.nextLine();
 
         if (opc == 1){
-            listaAnimalia.removeIf(a -> especie.equalsIgnoreCase(a.getEspecie()));
+            listaAnimalia.removeIf(a -> nomeEspecie.equalsIgnoreCase(a.getEspecie()));
+            System.out.println("Foi");
         } else if (opc == 2){
-            listaFungi.removeIf(f -> especie.equalsIgnoreCase(f.getEspecie()));
+            listaFungi.removeIf(f -> nomeEspecie.equalsIgnoreCase(f.getEspecie()));
         } else if (opc == 3){
-            listaMonera.removeIf(m -> especie.equalsIgnoreCase(m.getEspecie()));
+            listaMonera.removeIf(m -> nomeEspecie.equalsIgnoreCase(m.getEspecie()));
         } else if (opc == 4){
-            listaPlantae.removeIf(p -> especie.equalsIgnoreCase(p.getEspecie()));
+            listaPlantae.removeIf(p -> nomeEspecie.equalsIgnoreCase(p.getEspecie()));
         } else if (opc == 5){
-            listaProtista.removeIf(p -> especie.equalsIgnoreCase(p.getEspecie()));
+            listaProtista.removeIf(p -> nomeEspecie.equalsIgnoreCase(p.getEspecie()));
         } else {
             System.out.println("Verifique a opção informada!");
         }

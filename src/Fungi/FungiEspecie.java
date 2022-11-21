@@ -13,10 +13,11 @@ public class FungiEspecie extends FungiGenero {
 	}
 
 	public FungiEspecie(String nomeSerVivo, String reino, String filo, String classe, String ordem, String familia,
-			String genero, String especie, String tipoCelular) {
+			String genero, String especie, String tipoCelular, String organismo) {
 		super(nomeSerVivo, reino, filo, classe, ordem, familia, genero);
 		this.especie = especie;
 		this.tipoCelular = tipoCelular;
+		this.organismo = organismo;
 	}
 
 	public void cadastrar() {
@@ -84,9 +85,13 @@ public class FungiEspecie extends FungiGenero {
 		this.organismo = organismo;
 	}
 
-//	@Override
-//	public String toString() {
-//		return "FungiEspecie [especie=" + especie + "]";
-//	}
+	@Override
+	public String toString() {
+		return String.format("Reino: %s, Filo: %s, Classe: %s, Ordem: %s," +
+						" Família: %s, Gênero: %s, Espécie: %s, Tipo celular: %s," +
+						"Organismo: %s", getReino(), getFilo(),getClasse(),
+						getOrdem(), getFamilia(), getGenero(), especie, tipoCelular,
+						organismo);
+	}
 
 }

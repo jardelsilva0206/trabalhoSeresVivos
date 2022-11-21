@@ -40,10 +40,6 @@ public class AnimaliaEspecie extends AnimaliaGenero {
 		this.especie = especie;
 	}
 
-	@Override
-	public String toString() {
-		return "AnimaliaEspecie [especie=" + especie + "]";
-	}
 
 	public void atualizar() {
 		System.out.println("Filo:");
@@ -59,4 +55,11 @@ public class AnimaliaEspecie extends AnimaliaGenero {
 		System.out.println("Especie:");
 		this.especie = sc.next();
 	}
+	@Override
+	public String toString() {
+		return String.format("Reino: %s, Filo: %s, Classe: %s, Ordem: %s," +
+						" Família: %s, Gênero: %s, Espécie: %s", getReino(), getFilo(),
+				getClasse(), getOrdem(), getFamilia(), getGenero(), especie);
+	}
+
 }

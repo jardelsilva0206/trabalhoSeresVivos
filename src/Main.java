@@ -1,5 +1,8 @@
+import Animalia.AnimaliaEspecie;
+import Fungi.FungiEspecie;
 import Monera.MoneraEspecie;
 import Plantae.PlantaeEspecie;
+import Protista.ProtistaEspecie;
 
 import java.util.Scanner;
 
@@ -10,8 +13,22 @@ public class Main {
         Gerenciador gerenciador = new Gerenciador();
         boolean flag = true;
 
-        MoneraEspecie m = new MoneraEspecie("a", "b", "c", "d", "e", "f", "g", "h", "i", "j");
+        //Dados teste
+        AnimaliaEspecie a = new AnimaliaEspecie("Leão", "Animal", "Chordata", "Mammalia", "Carnívora", "Felide", "Panthera", "P. leo");
+        AnimaliaEspecie a1 = new AnimaliaEspecie("a", "a", "a", "a", "a", "a", "a", "a");
+        AnimaliaEspecie a2 = new AnimaliaEspecie("b", "b", "b", "b", "b", "b", "b", "b");
+        FungiEspecie f = new FungiEspecie("Champignon", "Fungi", "Basidiomycota", "Homobasidiomycetes", "Agaricales", "Agaricaceae", "Agaricus", "A. bisporus", "Quitina", "Fungo");
+        MoneraEspecie m = new MoneraEspecie("Streptococcus pyogenes", "Monera", "Firmicutes", "Bacilli", "Lactobacillales", "Streptococcaceae", "Streptococcus", "S. pyogenes", "Heterotróficos", "Multicelular");
+        PlantaeEspecie pl = new PlantaeEspecie("Anthurium", "Plantae", "Vascular", "Liliopsida", "Alismatales", "Araceae", "Anthurium", "Anthurium digitatum");
+        ProtistaEspecie pr = new ProtistaEspecie("Wakame", "Protista", "Heterokontophyta", "Fougère des mers", "Macroalga", "Phaeophyceae", "Laminariales", "Miyeok", "Undaria", "U. pinnatifida");
         gerenciador.addMonera(m);
+        gerenciador.addAnimalia(a);
+        gerenciador.addAnimalia(a1);
+        gerenciador.addAnimalia(a2);
+        gerenciador.addFungi(f);
+        gerenciador.addPlantae(pl);
+        gerenciador.addProtista(pr);
+
         while (flag){
             gerenciador.menuPrincipal();
             int opc = sc.nextInt();

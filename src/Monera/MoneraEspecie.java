@@ -86,4 +86,13 @@ public class MoneraEspecie extends MoneraGenero {
 	public void setOrganismo(String organismo) {
 		this.organismo = organismo;
 	}
+
+	@Override
+	public String toString() {
+		return String.format("Reino: %s, Filo: %s, Classe: %s, Ordem: %s," +
+						" Família: %s, Gênero: %s, Espécie: %s, Alimentação: %s," +
+						"Organismo: %s", getReino(), getFilo(), getClasse(),
+						getOrdem(), getFamilia(), getGenero(), especie, alimentacao,
+						organismo);
+	}
 }

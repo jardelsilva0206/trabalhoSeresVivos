@@ -38,11 +38,6 @@ public class PlantaeEspecie extends PlantaeGenero{
         this.especie = especie;
     }
 
-    @Override
-    public String toString(){
-        return "PlantaeEspecie [especie=" + especie + "]";
-    }
-
     public void atualizar(){
         System.out.println("Filo");
         setFilo(sc.next());
@@ -57,6 +52,13 @@ public class PlantaeEspecie extends PlantaeGenero{
         System.out.println("Espécie");
         this.especie = sc.next();
 
+    }
+
+    @Override
+    public String toString() {
+        return String.format("Reino: %s, Filo: %s, Classe: %s, Ordem: %s," +
+                        " Família: %s, Gênero: %s, Espécie: %s", getReino(), getFilo(),
+                getClasse(), getOrdem(), getFamilia(), getGenero(), especie);
     }
 
 }

@@ -54,4 +54,11 @@ public class ProtistaEspecie extends ProtistaGenero{
         System.out.println("Especie:");
         this.especie = sc.next();
     }
+
+    @Override
+    public String toString() {
+        return String.format("Reino: %s, Filo: %s, Super filo: %s, Classe: %s, Ordem: %s," +
+                "Família: %s, Gênero: %s, Espécie: %s", getReino(), getFilo(),
+                getSuperFilo() ,getClasse(), getOrdem(), getFamilia(), getGenero(), especie);
+    }
 }
